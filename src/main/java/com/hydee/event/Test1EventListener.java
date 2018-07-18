@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Test1EventListener implements ApplicationListener<ContextRefreshedEvent> {
 
-
+@Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
         Object source = event.getSource();
         System.out.println("调用上下文刷新++source"+source);
